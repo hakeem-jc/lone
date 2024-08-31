@@ -2,7 +2,7 @@ import Header from "./components/Header";
 
 export default function Home() {
   return (
-    <main className="dark:bg-gray-900 text-white w-screen">
+    <main className="dark:bg-gray-900 text-white">
       <Header />
       <section className="flex px-8 py-10 h-screen">
         <div className="mr-auto place-self-center ">
