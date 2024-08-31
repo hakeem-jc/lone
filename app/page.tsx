@@ -4,7 +4,7 @@ export default function Home() {
   return (
     <main className="dark:bg-gray-900 text-white">
       <Header />
-      <section className="flex px-8 py-10 h-screen">
+      <section className="flex px-12 py-10 h-screen">
         <div className="mr-auto place-self-center ">
           <h1 className="max-w-2xl mb-4 text-4xl font-extrabold tracking-tight leading-none md:text-5xl xl:text-6xl text-white">
             Fast Loans for Fair Prices
@@ -21,7 +21,7 @@ export default function Home() {
         </div>
         <div className="hidden lg:mt-0 lg:col-span-5 lg:flex">
           <img
-            src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/hero/phone-mockup.png"
+            src="/fintech.png"
             alt="mockup"
           />
         </div>
