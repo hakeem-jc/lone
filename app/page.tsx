@@ -28,7 +28,7 @@ export default function Home() {
 
       <section className="flex justify-center items-center h-screen py-20">
         <div className="text-center">
-          <h1 className="text-center text-5xl mb-10">
+          <h1 className="text-center text-5xl font-semibold mb-10">
             Ready to take the next step?
           </h1>
           <div className="p-8 w-4/6 mx-auto text-left">
