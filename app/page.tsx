@@ -14,7 +14,7 @@ export default function Home() {
           </p>
           <a
             href="#"
-            className="inline-flex items-center justify-center px-10 py-5 text-base font-medium text-center text-gray-900 border border-gray-300 rounded-lg hover:bg-gray-100 focus:ring-4 focus:ring-gray-100 dark:text-white dark:border-gray-700 dark:hover:bg-gray-700 dark:focus:ring-gray-800"
+            className="inline-flex items-center justify-center px-10 py-5 text-base font-medium text-center border rounded-lg 0 focus:ring-4  text-white border-gray-700 bg-sky-500 hover:bg-blue-500 focus:ring-gray-800"
           >
             Apply for a Loan
           </a>
@@ -36,14 +36,14 @@ export default function Home() {
           </p>
           <a
             href="#"
-            className="inline-flex items-center justify-center px-6 py-4 text-base font-medium text-center text-gray-900 border border-gray-300 rounded-lg hover:bg-gray-100 focus:ring-4 focus:ring-gray-100 dark:text-white dark:border-gray-700 dark:hover:bg-gray-700 dark:focus:ring-gray-800"
+            className="inline-flex items-center justify-center px-8 py-4 text-base font-medium text-center border rounded-lg 0 focus:ring-4  text-white border-gray-700 bg-sky-500 hover:bg-blue-500 focus:ring-gray-800"
           >
             Apply
           </a>
         </div>
       </section>
 
-      <footer className="bottom-0 left-0 z-20 w-full p-4 bg-white border-t border-gray-200 shadow md:flex md:items-center md:justify-between md:p-6 dark:bg-gray-800 dark:border-gray-600">
+      <footer className="bottom-0 left-0 z-20 w-full p-4 border-t  shadow md:flex md:items-center md:justify-between md:p-6 bg-gray-800 border-gray-600">
         <span className="text-sm text-gray-500 sm:text-center dark:text-gray-400">
           © 2023{" "}
           <a href="./" className="hover:underline">
