@@ -2,7 +2,7 @@ import { FC } from "react";
 
 const Header: FC = () => {
   return (
-    <nav className="bg-gray-900 fixed w-full z-20 top-0 start-0 border-b border-gray-600">
+    <nav className="bg-gray-900 w-full border-b border-gray-600">
       <div className="flex flex-wrap items-center justify-between  p-4">
         <a
           href="./"

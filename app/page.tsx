@@ -3,9 +3,9 @@ import Header from "./components/Header";
 
 export default function Home() {
   return (
-    <main className="dark:bg-gray-900 h-screen">
+    <main className="dark:bg-gray-900 min-h-screen">
       <Header />
-      <div className="grid max-w-screen-xl px-4 py-8 mx-auto lg:gap-8 xl:gap-0 lg:py-16 lg:grid-cols-12">
+      <section className="flex px-8 py-10">
         <div className="mr-auto place-self-center lg:col-span-7">
           <h1 className="max-w-2xl mb-4 text-4xl font-extrabold tracking-tight leading-none md:text-5xl xl:text-6xl text-white">
             Fast Loans for Fair Prices
@@ -26,7 +26,10 @@ export default function Home() {
             alt="mockup"
           />
         </div>
-      </div>
+      </section>
+      <footer className="p-6 border-t border-gray-600 w-screen text-center">
+        <p className="text-white">Lone Inc</p>
+      </footer>
     </main>
   );
 }
