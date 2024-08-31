@@ -115,7 +115,7 @@ export default function Home() {
             </p>
           </div>
           <a
-            href="#"
+            href="./apply"
             className="inline-flex items-center justify-center px-6 py-3 lg:px-8 lg:py-4 text-base font-medium text-center border rounded-lg focus:ring-4 text-white border-gray-700 bg-sky-500 hover:bg-blue-500 focus:ring-gray-800 mt-2"
           >
             Apply Now
