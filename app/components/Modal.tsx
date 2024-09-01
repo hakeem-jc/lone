@@ -7,7 +7,7 @@ const Modal = ({ toggleModal }: { toggleModal: () => void }) => {
           <div className="relative rounded-lg shadow bg-gray-700">
             <div className="flex items-center justify-between p-4 md:p-5 border-b rounded-t border-gray-600">
               <h3 className="text-lg font-semiboldtext-white">
-                You've Been Approved!
+                You&apos;ve Been Approved!
               </h3>
               <button
                 type="button"
