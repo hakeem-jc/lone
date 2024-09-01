@@ -14,7 +14,7 @@ export default function Apply() {
   const [openModal, setOpenModal] = useState(false);
   const toggleModal = () => setOpenModal(!openModal);
 
-  const handleInputChange = (e:any) => {
+  const handleInputChange = (e: any) => {
     const { id, value } = e.target;
     setFormData((prevData) => ({
       ...prevData,
@@ -22,7 +22,7 @@ export default function Apply() {
     }));
   };
 
-  const handleSubmit = (e:any) => {
+  const handleSubmit = (e: any) => {
     e.preventDefault();
     console.log("Form submitted:", formData);
     setOpenModal(true);
@@ -34,18 +34,18 @@ export default function Apply() {
       <Header />
       <section className="h-screen">
         <form
-          className="max-w-xl mx-auto mt-10 flex flex-col gap-6"
+          className="max-w-full md:max-w-xl mx-auto mt-6 md:mt-10 flex flex-col gap-4 md:gap-6 px-4"
           onSubmit={handleSubmit}
         >
           <div>
             <label
               htmlFor="email"
-              className="block mb-2 text-lg font-medium text-gray-900 dark:text-white"
+              className="block mb-2 text-sm md:text-lg font-medium text-gray-900 dark:text-white"
             >
               Your Email
             </label>
             <div className="relative">
-              <div className="absolute inset-y-0 start-0 flex items-center ps-3.5 pointer-events-none">
+              <div className="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
                 <svg
                   className="w-4 h-4 text-gray-500 dark:text-gray-400"
                   aria-hidden="true"
@@ -62,7 +62,7 @@ export default function Apply() {
                 id="email"
                 value={formData.email}
                 onChange={handleInputChange}
-                className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full ps-10 px-2.5 py-5  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full pl-10 px-2 py-4 md:py-5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
                 placeholder="name@email.com"
                 required
               />
@@ -72,7 +72,7 @@ export default function Apply() {
           <div>
             <label
               htmlFor="name"
-              className="block mb-2 text-lg font-medium text-gray-900 dark:text-white"
+              className="block mb-2 text-sm md:text-lg font-medium text-gray-900 dark:text-white"
             >
               Name
             </label>
@@ -81,7 +81,7 @@ export default function Apply() {
               id="name"
               value={formData.name}
               onChange={handleInputChange}
-              className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full px-2.5 py-5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+              className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full px-2 py-4 md:py-5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
               placeholder="John Edwards"
               required
             />
@@ -90,7 +90,7 @@ export default function Apply() {
           <div>
             <label
               htmlFor="loanAmount"
-              className="block mb-2 text-lg font-medium text-gray-900 dark:text-white"
+              className="block mb-2 text-sm md:text-lg font-medium text-gray-900 dark:text-white"
             >
               How much money do you need?
             </label>
@@ -99,7 +99,7 @@ export default function Apply() {
               id="loanAmount"
               value={formData.loanAmount}
               onChange={handleInputChange}
-              className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full px-2.5 py-5  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+              className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full px-2 py-4 md:py-5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
               placeholder="5000"
               data-currency="USD"
               required
@@ -109,7 +109,7 @@ export default function Apply() {
           <div>
             <label
               htmlFor="monthlyIncome"
-              className="block mb-2 text-lg font-medium text-gray-900 dark:text-white"
+              className="block mb-2 text-sm md:text-lg font-medium text-gray-900 dark:text-white"
             >
               How much do you make a month?
             </label>
@@ -118,7 +118,7 @@ export default function Apply() {
               id="monthlyIncome"
               value={formData.monthlyIncome}
               onChange={handleInputChange}
-              className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full px-2.5 py-5  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+              className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full px-2 py-4 md:py-5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
               placeholder="5000"
               data-currency="USD"
               required
@@ -140,7 +140,7 @@ export default function Apply() {
 
           <button
             type="submit"
-            className="w-full inline-flex items-center justify-center px-6 py-3 lg:px-8 lg:py-5 text-base font-medium text-center border rounded-lg focus:ring-4 text-white border-gray-700 bg-sky-500 hover:bg-blue-500 focus:ring-gray-800 mt-10"
+            className="w-full inline-flex items-center justify-center px-4 py-3 md:px-8 md:py-5 text-base font-medium text-center border rounded-lg focus:ring-4 text-white border-gray-700 bg-sky-500 hover:bg-blue-500 focus:ring-gray-800 mt-6 md:mt-10"
           >
             Apply
           </button>
