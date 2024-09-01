@@ -127,7 +127,7 @@ export default function Apply() {
               id="helper-text-explanation"
               className="mt-2 text-sm text-gray-500 dark:text-gray-400"
             >
-              We'll never share your details. Read our
+              We&apos;ll never share your details. Read our
               <a
                 href="#"
                 className="font-medium text-blue-600 hover:underline dark:text-blue-500 ml-1"
