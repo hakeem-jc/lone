@@ -4,14 +4,14 @@ const Modal = ({ toggleModal }: { toggleModal: () => void }) => {
     <div className="absolute flex flex-col h-screen w-full z-10 justify-center items-center bg-black/50">
       <div aria-hidden="true">
         <div className="p-4 w-full max-w-md max-h-full mx-auto">
-          <div className="relative bg-white rounded-lg shadow dark:bg-gray-700">
-            <div className="flex items-center justify-between p-4 md:p-5 border-b rounded-t dark:border-gray-600">
-              <h3 className="text-lg font-semibold text-gray-900 dark:text-white">
-                Approved
+          <div className="relative rounded-lg shadow bg-gray-700">
+            <div className="flex items-center justify-between p-4 md:p-5 border-b rounded-t border-gray-600">
+              <h3 className="text-lg font-semiboldtext-white">
+                You've Been Approved!
               </h3>
               <button
                 type="button"
-                className="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm w-8 h-8 ms-auto inline-flex justify-center items-center dark:hover:bg-gray-600 dark:hover:text-white"
+                className="text-gray-400 bg-transparentrounded-lg text-sm w-8 h-8 ms-auto inline-flex justify-center items-center hover:bg-gray-600 hover:text-white"
                 data-modal-toggle="crud-modal"
                 onClick={() => toggleModal()}
               >
@@ -34,7 +34,7 @@ const Modal = ({ toggleModal }: { toggleModal: () => void }) => {
               </button>
             </div>
             <div className="p-10">
-              <p>Your money is on the way</p>
+              <p>Your money is on the way 💸</p>
             </div>
           </div>
         </div>
