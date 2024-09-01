@@ -38,7 +38,7 @@ export const LoanApprovalEmail = ({
           <Section>
             <Text style={text}>Hi {borrowerFirstName},</Text>
             <Text style={text}>
-              We're excited to inform you that your loan application has been
+              We&apos;re excited to inform you that your loan application has been
               approved, and the funds have been successfully disbursed to your
               account.
             </Text>
