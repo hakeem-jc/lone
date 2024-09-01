@@ -1,15 +1,45 @@
+"use client";
+import React, { useState } from "react";
 import Header from "@/app/components/Header";
 import Footer from "@/app/components/Footer";
+import Modal from "@/app/components/Modal";
 
 export default function Apply() {
+  const [formData, setFormData] = useState({
+    email: "",
+    name: "",
+    loanAmount: "",
+    monthlyIncome: "",
+  });
+  const [openModal, setOpenModal] = useState(false);
+  const toggleModal = () => setOpenModal(!openModal);
+
+  const handleInputChange = (e:any) => {
+    const { id, value } = e.target;
+    setFormData((prevData) => ({
+      ...prevData,
+      [id]: value,
+    }));
+  };
+
+  const handleSubmit = (e:any) => {
+    e.preventDefault();
+    console.log("Form submitted:", formData);
+    setOpenModal(true);
+  };
+
   return (
     <main className="bg-gray-900 text-white">
+      {openModal && <Modal toggleModal={toggleModal} />}
       <Header />
       <section className="h-screen">
-        <form className="max-w-xl mx-auto mt-10 flex flex-col gap-6">
+        <form
+          className="max-w-xl mx-auto mt-10 flex flex-col gap-6"
+          onSubmit={handleSubmit}
+        >
           <div>
             <label
-              htmlFor="email-address-icon"
+              htmlFor="email"
               className="block mb-2 text-lg font-medium text-gray-900 dark:text-white"
             >
               Your Email
@@ -28,10 +58,13 @@ export default function Apply() {
                 </svg>
               </div>
               <input
-                type="text"
-                id="email-address-icon"
+                type="email"
+                id="email"
+                value={formData.email}
+                onChange={handleInputChange}
                 className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full ps-10 px-2.5 py-5  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
                 placeholder="name@email.com"
+                required
               />
             </div>
           </div>
@@ -46,6 +79,8 @@ export default function Apply() {
             <input
               type="text"
               id="name"
+              value={formData.name}
+              onChange={handleInputChange}
               className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full px-2.5 py-5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
               placeholder="John Edwards"
               required
@@ -54,16 +89,18 @@ export default function Apply() {
 
           <div>
             <label
-              htmlFor="name"
+              htmlFor="loanAmount"
               className="block mb-2 text-lg font-medium text-gray-900 dark:text-white"
             >
               How much money do you need?
             </label>
             <input
               type="number"
-              id="name"
+              id="loanAmount"
+              value={formData.loanAmount}
+              onChange={handleInputChange}
               className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full px-2.5 py-5  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-              placeholder="$5,000"
+              placeholder="5000"
               data-currency="USD"
               required
             />
@@ -71,16 +108,18 @@ export default function Apply() {
 
           <div>
             <label
-              htmlFor="name"
+              htmlFor="monthlyIncome"
               className="block mb-2 text-lg font-medium text-gray-900 dark:text-white"
             >
               How much do you make a month?
             </label>
             <input
               type="number"
-              id="name"
+              id="monthlyIncome"
+              value={formData.monthlyIncome}
+              onChange={handleInputChange}
               className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full px-2.5 py-5  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-              placeholder="$5,000"
+              placeholder="5000"
               data-currency="USD"
               required
             />
@@ -88,7 +127,7 @@ export default function Apply() {
               id="helper-text-explanation"
               className="mt-2 text-sm text-gray-500 dark:text-gray-400"
             >
-              We’ll never share your details. Read our{" "}
+              We'll never share your details. Read our{" "}
               <a
                 href="#"
                 className="font-medium text-blue-600 hover:underline dark:text-blue-500"
