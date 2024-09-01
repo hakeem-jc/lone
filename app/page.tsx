@@ -22,7 +22,7 @@ export default function Home() {
             Fast Loans for Fair Prices
           </h1>
           <p className="max-w-2xl mb-6 font-light lg:mb-8 text-base md:text-lg lg:text-xl text-gray-400">
-            Need cash fast? We've got you covered. Our digital lending app
+            Need cash fast? We&apos;ve got you covered. Our digital lending app
             provides quick, hassle-free loans to help you manage unexpected
             expenses or seize sudden opportunities.
           </p>
@@ -53,7 +53,7 @@ export default function Home() {
           </h1>
           <div className="p-4 lg:p-8 mx-auto text-left">
             <h2 className="text-xl lg:text-2xl font-semibold mb-4">
-              Here's how it works:
+              Here&apos;s how it works:
             </h2>
 
             <div className="overflow-x-auto">
@@ -104,8 +104,8 @@ export default function Home() {
             </div>
 
             <p className="mt-6 text-base lg:text-lg">
-              Whether you're dealing with an emergency expense, consolidating
-              debt, or investing in yourself, we're here to provide the
+              Whether you&apos;re dealing with an emergency expense, consolidating
+              debt, or investing in yourself, we&apos;re here to provide the
               financial boost you need, when you need it.
             </p>
 
