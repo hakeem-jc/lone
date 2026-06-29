@@ -2,12 +2,6 @@
 
 import { useState } from "react";
 
-/* ─── Google Fonts: Roboto ──────────────────────────────────────────────────
-   Add this to your <head> (layout.tsx) or import in globals.css:
-   @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap');
-   Then set font-family: 'Roboto', sans-serif on html/body.
-   The inline style below ensures it works as a standalone file too.
-─────────────────────────────────────────────────────────────────────────── */
 
 // ── Design tokens ────────────────────────────────────────────────────────────
 const BG      = "#0b0b0c";   // page background
@@ -71,16 +65,12 @@ export default function LoneHomepage() {
         fontFamily: "'Roboto', sans-serif",
       }}
     >
-      {/* Roboto font injection */}
-      <style>{`@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap');`}</style>
-
-      {/* ── NAV ── */}
       <nav
-        className="sticky top-0 z-50 backdrop-blur"
+        className="sticky top-0 z-50 backdrop-blur border-b-[#2a2a2e]"
         style={{ background: `${BG}e8`, borderBottom: `1px solid ${BORDER}` }}
       >
         <div className="max-w-7xl mx-auto px-6 h-14 flex items-center justify-between">
-          <span className="text-xl font-black tracking-tight text-white">
+          <span className="text-xl font-black tracking-tight text-emerald-600">
             Lone<span style={{ color: MUTED }}>.</span>
           </span>
           <div className="hidden md:flex items-center gap-8 text-sm" style={{ color: MUTED }}>
@@ -89,11 +79,10 @@ export default function LoneHomepage() {
             ))}
           </div>
           <div className="flex items-center gap-3 text-sm">
-            <a href="#" className="hover:text-white transition-colors" style={{ color: MUTED }}>Login</a>
+            <a href="/onboarding" className="hover:text-white transition-colors" style={{ color: MUTED }}>Login</a>
             <a
-              href="#"
-              className="font-medium px-4 py-1.5 rounded-full transition-colors hover:opacity-90"
-              style={{ background: "#ffffff", color: BG }}
+              href="/onboarding"
+              className="font-medium px-4 py-1.5 rounded-full transition-colors hover:opacity-90 bg-emerald-600 text-white"
             >
               Apply Now
             </a>
@@ -119,8 +108,7 @@ export default function LoneHomepage() {
           <div className="flex gap-3 mb-10">
             <a
               href="#"
-              className="px-5 py-2.5 rounded-full text-sm font-medium transition-colors hover:opacity-90"
-              style={{ background: "#ffffff", color: BG }}
+              className="px-5 py-2.5 rounded-full text-sm font-medium transition-colors hover:opacity-90 bg-emerald-600 text-white"
             >
               Check My Rate — No Credit Hit
             </a>
@@ -171,13 +159,22 @@ export default function LoneHomepage() {
                 </div>
               </div>
               {/* Monthly */}
-              <div className="rounded-xl p-4" style={{ background: BG, border: `1px solid ${BORDER}` }}>
+              <div className="rounded-xl p-4 " style={{ background: BG, border: `1px solid ${BORDER}` }}>
                 <p className="text-xs mb-1" style={{ color: MUTED }}>Monthly Payment</p>
-                <p className="text-2xl font-bold text-white">$625</p>
+                <p className="text-2xl font-bold text-emerald-600">$625</p>
                 <p className="text-[10px] mb-2" style={{ color: MUTED }}>/ month</p>
-                <div className="flex items-end gap-1 h-10">
+                {/* <div className="flex items-end gap-1 h-10">
                   {[100,100,100,100,100].map((h,i)=>(
                     <div key={i} className="flex-1 rounded-sm" style={{ height:`${h}%`, background: i < 2 ? "#ffffff" : DIM }} />
+                  ))}
+                </div> */}
+                  <div className="flex items-end gap-1 h-10">
+                  {[100, 100, 100, 100, 100].map((h, i) => (
+                    <div
+                      key={i}
+                      className={`flex-1 rounded-sm ${i < 2 ? "bg-emerald-500" : "bg-emerald-200"}`}
+                      style={{ height: `${h}%` }}
+                    />
                   ))}
                 </div>
                 <p className="text-[10px] mt-1" style={{ color: MUTED }}>5 payments remaining</p>
@@ -496,8 +493,14 @@ export default function LoneHomepage() {
                 </div>
                 <div className="text-right">
                   <div className="flex items-end gap-1 mb-1">
-                    {[[16,"#444"],[20,"#666"],[24,"#999"],[28,"#ccc"],[32,"#fff"]].map(([h,c],i)=>(
-                      <div key={i} className="w-3 rounded-sm" style={{ height:`${h}px`, background:c }} />
+                    {[
+                      ["bg-red-500", 16],
+                      ["bg-yellow-400", 20],
+                      ["bg-emerald-400", 24],
+                      ["bg-emerald-500", 28],
+                      ["bg-emerald-600", 32],
+                    ].map(([c, h], i) => (
+                      <div key={i} className={`w-3 rounded-sm ${c}`} style={{ height: `${h}px` }} />
                     ))}
                     <span className="text-xl font-black text-white ml-1">720</span>
                   </div>
@@ -555,8 +558,7 @@ export default function LoneHomepage() {
             </a>
             <a
               href="#"
-              className="px-5 py-2 rounded-full text-sm font-medium transition-colors hover:opacity-90"
-              style={{ background: "#ffffff", color: BG }}
+              className="px-5 py-2 rounded-full text-sm font-medium transition-colors hover:opacity-90 bg-emerald-600 text-white"
             >
               Contact Support
             </a>
@@ -608,7 +610,7 @@ export default function LoneHomepage() {
         <div className="max-w-7xl mx-auto px-6 text-center mb-14">
           <h2 className="text-4xl font-black tracking-tight mb-4 text-white">
             Ready to get the funds{" "}
-            <span style={{ color: MUTED }}>you need today?</span>
+            <span className="text-emerald-600">you need today?</span>
           </h2>
           <p className="text-sm mb-8 max-w-md mx-auto" style={{ color: MUTED }}>
             Apply in under 3 minutes. No paperwork, no branch visits. Just fast,
@@ -622,8 +624,7 @@ export default function LoneHomepage() {
               style={{ background: BG, border: `1px solid ${BORDER}` }}
             />
             <button
-              className="px-5 py-2.5 rounded-full text-sm font-medium whitespace-nowrap transition-colors hover:opacity-90"
-              style={{ background: "#ffffff", color: BG }}
+              className="px-5 py-2.5 rounded-full text-sm font-medium whitespace-nowrap transition-colors hover:opacity-90 bg-emerald-600 text-white"
             >
               Get Started
             </button>
@@ -656,7 +657,11 @@ export default function LoneHomepage() {
                 <p className="text-xl font-bold text-white">$1,250 left</p>
                 <div className="mt-3 flex items-end gap-1 h-10">
                   {[100,100,60,30,10].map((h,i)=>(
-                    <div key={i} className="flex-1 rounded-sm" style={{ height:`${h}%`, background: i<2 ? "#ffffff" : DIM }} />
+                    <div
+                      key={i}
+                      className={`flex-1 rounded-sm ${i < 2 ? "bg-emerald-500" : "bg-emerald-200"}`}
+                      style={{ height: `${h}%` }}
+                    />
                   ))}
                 </div>
               </div>
